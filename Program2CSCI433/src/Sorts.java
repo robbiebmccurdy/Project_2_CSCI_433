@@ -1,6 +1,16 @@
+/*
+Assignment: Programming Assignment #2
+Course: CSCI 433
+Professor: Yixin Chen
+Name: Robert McCurdy
+Brief Description:
+This class is where all of our sort methods are stored. In this class you can find the insertion sort, selection sort, bubble sort, merge sort,
+and quick sort.
+*/
+
 public class Sorts {
 
-    int[] InsertionSort(int[] A) {
+    void InsertionSort(int[] A) {
         int n = A.length;
 
         for (int i = 1; i < n; i++) {
@@ -13,10 +23,9 @@ public class Sorts {
             }
             A[position] = val;
         }
-        return A;
     }
 
-    int[] SelectionSort(int[] A) {
+    void SelectionSort(int[] A) {
         int n = A.length;
 
         for(int i = 0; i < n - 1; i++){
@@ -27,16 +36,14 @@ public class Sorts {
                 }
             }
             if(A[min] != A[i]){
-                int temp = 0;
-                temp = A[i];
+                int temp = A[i];
                 A[i] = A[min];
                 A[min] = temp;
             }
         }
-        return A;
     }
 
-    int[] BubbleSort(int[] A) {
+    void BubbleSort(int[] A) {
         boolean swapped = true;
         int n = A.length;
 
@@ -52,7 +59,6 @@ public class Sorts {
             }
             n = n - 1;
         }
-        return A;
     }
 
     //MergeSort
